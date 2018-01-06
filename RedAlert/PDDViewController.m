@@ -10,28 +10,31 @@
 
 @interface PDDViewController ()
 
+@property (nonatomic, assign) BOOL isRed;
+
 @end
 
 @implementation PDDViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+	GLKView *view = (GLKView *)self.view;
+	view.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+	self.isRed = YES;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
+	glClear(GL_COLOR_BUFFER_BIT);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)update {
+    
+	if (self.isRed) {
+		glClearColor(208.0/255.0, 2.0/255.0, 27.0/255.0, 1.0);
+	} else {
+		glClearColor(0.0/255.0, 0.0/255.0, 0.0/255.0, 1.0);
+	}
+    self.isRed = !self.isRed;
 }
-*/
 
 @end

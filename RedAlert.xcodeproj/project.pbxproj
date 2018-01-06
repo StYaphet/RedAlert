@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6E0D11DA200142BE008018F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D11D9200142BE008018F5 /* AppDelegate.m */; };
-		6E0D11DD200142BE008018F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D11DC200142BE008018F5 /* ViewController.m */; };
 		6E0D11E0200142BE008018F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D11DE200142BE008018F5 /* Main.storyboard */; };
 		6E0D11E2200142BE008018F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D11E1200142BE008018F5 /* Assets.xcassets */; };
 		6E0D11E5200142BE008018F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D11E3200142BE008018F5 /* LaunchScreen.storyboard */; };
 		6E0D11E8200142BE008018F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D11E7200142BE008018F5 /* main.m */; };
 		6E0D11F2200142BE008018F5 /* RedAlertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D11F1200142BE008018F5 /* RedAlertTests.m */; };
 		6E0D11FD200142BE008018F5 /* RedAlertUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D11FC200142BE008018F5 /* RedAlertUITests.m */; };
+		6E0D120C200142F4008018F5 /* PDDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D120B200142F4008018F5 /* PDDViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,6 @@
 		6E0D11D5200142BE008018F5 /* RedAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0D11D8200142BE008018F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6E0D11D9200142BE008018F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6E0D11DB200142BE008018F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6E0D11DC200142BE008018F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6E0D11DF200142BE008018F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E0D11E1200142BE008018F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E0D11E4200142BE008018F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +49,8 @@
 		6E0D11F8200142BE008018F5 /* RedAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0D11FC200142BE008018F5 /* RedAlertUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedAlertUITests.m; sourceTree = "<group>"; };
 		6E0D11FE200142BE008018F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E0D120A200142F4008018F5 /* PDDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDDViewController.h; sourceTree = "<group>"; };
+		6E0D120B200142F4008018F5 /* PDDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +103,8 @@
 			children = (
 				6E0D11D8200142BE008018F5 /* AppDelegate.h */,
 				6E0D11D9200142BE008018F5 /* AppDelegate.m */,
-				6E0D11DB200142BE008018F5 /* ViewController.h */,
-				6E0D11DC200142BE008018F5 /* ViewController.m */,
+				6E0D120A200142F4008018F5 /* PDDViewController.h */,
+				6E0D120B200142F4008018F5 /* PDDViewController.m */,
 				6E0D11DE200142BE008018F5 /* Main.storyboard */,
 				6E0D11E1200142BE008018F5 /* Assets.xcassets */,
 				6E0D11E3200142BE008018F5 /* LaunchScreen.storyboard */,
@@ -194,6 +194,7 @@
 		6E0D11CD200142BE008018F5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PDD;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "郝一鹏";
 				TargetAttributes = {
@@ -265,9 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E0D11DD200142BE008018F5 /* ViewController.m in Sources */,
 				6E0D11E8200142BE008018F5 /* main.m in Sources */,
 				6E0D11DA200142BE008018F5 /* AppDelegate.m in Sources */,
+				6E0D120C200142F4008018F5 /* PDDViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,12 +431,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8H2FDT6QCT;
 				INFOPLIST_FILE = RedAlert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Pandada.RedAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -444,12 +448,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8H2FDT6QCT;
 				INFOPLIST_FILE = RedAlert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Pandada.RedAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
